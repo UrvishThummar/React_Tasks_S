@@ -14,7 +14,7 @@ function Example() {
   });
   const [users, setUsers] = useState([]);
   const[edit,setedit]=useState(null)
-  
+    
   function handleChange(e) {
     setInput({ ...input, [e.target.name]: e.target.value });
   }
