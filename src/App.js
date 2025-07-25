@@ -12,6 +12,7 @@ import Card from './Componenet/Card';
 import Color from './Componenet/Color';
 import Render from './Componenet/Render';
 import { FormValidation } from './Componenet/FormValidation';
+import WPM from './Componenet/WPM';
 
 
 function App() {
@@ -28,7 +29,8 @@ function App() {
       {/* <Card/> */}
       {/* <Color/> */}
       {/* <Render/> */}
-      <FormValidation/>
+      {/* <FormValidation/> */}
+      <WPM/>
     </div>
   );
 }

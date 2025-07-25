@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 function Title() {
   const [newTitle, setNewTitle] = useState('');
 
-  function handleTitleChange (){
+  function handleTitleChange() {
     if (newTitle.trim()) {
       document.title = newTitle;
-      setNewTitle(''); 
-        }
+      setNewTitle('');
+    }
   };
 
   return (
@@ -18,11 +18,11 @@ function Title() {
         value={newTitle}
         onChange={(e) => setNewTitle(e.target.value)}
         placeholder="Enter new title"
-       
+
       />
       <button
         onClick={handleTitleChange}
-       
+
       >
         Change Title
       </button>
