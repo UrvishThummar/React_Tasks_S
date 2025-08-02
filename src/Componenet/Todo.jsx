@@ -1,62 +1,73 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 
 function Todo() {
-  const [data, setdata] = useState({ name: '', email: '' })
-  const [list, setlist] = useState([])
+
+  const data=JSON.parse(localStorage.getItem('user'))||[]
+  const [input, setinput] = useState({
+    name: "",
+    username: ''
+  })
+
+  const [list, setlist] = useState(data)
   const [edit, setedit] = useState(null)
-  
-  function handelchange(e) {
-    setdata({ ...data, [e.target.name]: e.target.value })
+
+  useEffect(()=>{
+    localStorage.setItem('user',JSON.stringify(list))
+  },[list])
+
+  function handelSubmit(e) {
+    setinput({ ...input, [e.target.name]: e.target.value })
   }
 
-  function handelsubmit(index) {
-    
-      const trimmedData = {
-      name: data.name.trim(),
-      email: data.email.trim()
-    };
-
-    if (trimmedData.name === "" || trimmedData.email === "") {
-      alert("Name and Email cannot be empty.");
-      return;
-     
-    }
+  function handelAdd(i) {
     if (edit !== null) {
-      const updateList = [...list]
-      updateList[edit] = data;
-      setlist(updateList)
+      let update = [...list]
+      update[edit] = input
+      setlist(update)
       setedit(null)
     } else {
-      setlist([...list, data]);
+      setlist([...list, input])
+
     }
-    setdata({ name: '', email: '' })
+
+    setinput({
+      name: '',
+      username: ''
+    })
+
+  }
+  function handelDelete(i) {
+    let update = [...list]
+    update.splice(i, 1)
+    setlist(update)
   }
 
-  function handelEdit(index) {
-    setdata(list[index])
-    setedit(index)
+  function handelEdit(i) {
+    setinput(list[i])
+    setedit(i)
   }
 
-  function handeldelete(index) {
-    const updateList = [...list]
-    updateList.splice(index, 1)
-    setlist(updateList)
-  }
   return (
-    <div>
-      <input type="text" name="name" value={data.name} id="" placeholder="Enter Name" onChange={handelchange}  />
-      <input type="email" name="email" value={data.email} id="" placeholder="Enter email" onChange={handelchange} />
-      <button onClick={handelsubmit}>Add</button>
+    <div style={{margin:'10px 10px'}}>
+      <input type="text" name="name" value={input.name} id="" placeholder=" Enter Name" onChange={handelSubmit} /><br /><br />
+      <input type="text" name="username" value={input.username} id="" placeholder="Enter username" onChange={handelSubmit} /><br /><br />
+      <button onClick={handelAdd}>Add</button><br />
+      <hr />
 
-      <ul>
-        {list.map((li, index) => (
-          <li key={index}>{li.name}-{li.email}
-            <button onClick={() => handelEdit(index)}>Edit</button>
-            <button onClick={() => handeldelete(index)}>Delete</button>
-          </li>
-        ))}
-      </ul>
+      <ol>
+        {
+          list.map((u, i) => (
+            <li key={i}><b>Name is:</b>{u.name} <br />
+              <b>username is:</b>{u.username}
+              <button onClick={() => handelDelete(i)} style={{margin:'10px 10px'}}>Delete</button>
+              <button onClick={() => handelEdit(i)}  style={{margin:'10px 10px'}}>Edit</button>
+              <hr /></li>
+          ))
+        }
+      </ol>
     </div>
   )
+
+
 }
 export default Todo;

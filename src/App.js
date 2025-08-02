@@ -8,14 +8,29 @@ import Mount from './Componenet/Mount';
 import APIF from './Componenet/APIF';
 import Title from './Componenet/Title';
 import TodoREF from './Componenet/TodoREF';
-import Card from './Componenet/Card';
+import Card12 from './Componenet/Card12';
 import Color from './Componenet/Color';
 import Render from './Componenet/Render';
 import { FormValidation } from './Componenet/FormValidation';
 import WPM from './Componenet/WPM';
+import Demo from './Componenet/Demo'
+import { useState } from 'react';
+import MountUnm from './Componenet/Table';
+import Table from './Componenet/Table';
+import Card from './Componenet/Card';
+import { Navbar } from 'react-bootstrap';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Nav from './Componenet/Nav';
+import Pro from './Componenet/Pro';
+import Child1 from './Componenet/Child1';
 
 
 function App() {
+  // const[loading,setLoading]=useState(true)
+  // const [showCard, setShowCard] = useState(true);
+  //     const [show,setshow]=useState(false)
+
+
   return (
     <div>
       {/* <Todo/> */}
@@ -30,7 +45,29 @@ function App() {
       {/* <Color/> */}
       {/* <Render/> */}
       {/* <FormValidation/> */}
-      <WPM/>
+      {/* <WPM/> */}
+      {/* <Demo/> */}
+      {/* <MountUnm/> */}
+      {/* <Card/> */}
+      {/* <Card12/> */}
+
+      {/* { show ? <Card/> :<Table/>}
+
+      <button onClick={()=>setshow(true)}> card</button>
+            <button onClick={()=>setshow(false)}>table</button> */}
+
+      <Nav />
+
+      <Routes>
+        <Route path='/API' element={<API />}></Route>
+        <Route path='/Card12' element={<Card12 />}></Route>
+        <Route path='/Pro' element={<Pro />}>
+          <Route path='Child1' element={<Child1></Child1>}></Route>
+        </Route>
+
+      </Routes>
+
+
     </div>
   );
 }
