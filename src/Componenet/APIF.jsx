@@ -4,7 +4,7 @@ function APIF() {
     const [state, setstate] = useState({
         name: '',
         gender: '',
-        iamge: ''
+        image: ''
     })
     useEffect(() => {
         randomUser();
@@ -17,7 +17,7 @@ function APIF() {
             setstate({
                 name: data.results[0].name.first,
                 gender: data.results[0].gender,
-                image: data.results[0].picture.thumbnail
+                image: data.results[0].picture.thumbnail    
             })
             // console.log(data);
         })

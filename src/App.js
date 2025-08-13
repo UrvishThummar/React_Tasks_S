@@ -23,6 +23,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Nav from './Componenet/Nav';
 import Pro from './Componenet/Pro';
 import Child1 from './Componenet/Child1';
+import Home from './Componenet/Home';
+import Capi from './Componenet/Capi';
+
 
 
 function App() {
@@ -33,7 +36,10 @@ function App() {
 
   return (
     <div>
-      {/* <Todo/> */}
+
+      {/* <Home/> */}
+      {/* <Capi/> */}
+      <Todo/>
       {/* <API/> */}
       {/* <Timer/> */}
       {/* <Usermanagement/> */}
@@ -56,7 +62,7 @@ function App() {
       <button onClick={()=>setshow(true)}> card</button>
             <button onClick={()=>setshow(false)}>table</button> */}
 
-      <Nav />
+      {/* <Nav />
 
       <Routes>
         <Route path='/API' element={<API />}></Route>
@@ -65,7 +71,7 @@ function App() {
           <Route path='Child1' element={<Child1></Child1>}></Route>
         </Route>
 
-      </Routes>
+      </Routes> */}
 
 
     </div>

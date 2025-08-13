@@ -20,12 +20,16 @@ function Todo() {
   }
 
   function handelAdd(i) {
+    if(input.name==''||input.username==''){
+      alert('Enter Data')
+    }
+
     if (edit !== null) {
       let update = [...list]
       update[edit] = input
       setlist(update)
       setedit(null)
-    } else {
+    } else {  
       setlist([...list, input])
 
     }
