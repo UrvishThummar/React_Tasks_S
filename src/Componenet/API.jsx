@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";    
+import { Link } from "react-router-dom";
 
 function API() {
     const [products, setProducts] = useState([]); 
@@ -18,7 +19,7 @@ function API() {
             <ul >
                 {products.map((item) => (
                     <li key={item.id}>
-                        <h3>{item.title}</h3>  
+                        <Link to={`/ProductDetail/${item.id}`}>{item.title}</Link>  <br />
                         <img src={item.image} alt={item.title} width="100" />
                         <p>${item.price}</p>
                     </li>

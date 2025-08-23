@@ -21,8 +21,6 @@ function TodoREF() {
             setitem([...item, { name, email }])
 
         }
-
-
         nameref.current.value = ''
         emailref.current.value = ''
     }

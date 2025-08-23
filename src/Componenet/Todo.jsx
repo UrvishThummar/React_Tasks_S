@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 function Todo() {
 
-  const data=JSON.parse(localStorage.getItem('user'))||[]
+  const data = JSON.parse(localStorage.getItem('user')) || []
   const [input, setinput] = useState({
     name: "",
     username: ''
@@ -11,16 +11,16 @@ function Todo() {
   const [list, setlist] = useState(data)
   const [edit, setedit] = useState(null)
 
-  useEffect(()=>{
-    localStorage.setItem('user',JSON.stringify(list))
-  },[list])
+  useEffect(() => {
+    localStorage.setItem('user', JSON.stringify(list))
+  }, [list])
 
   function handelSubmit(e) {
     setinput({ ...input, [e.target.name]: e.target.value })
   }
 
   function handelAdd(i) {
-    if(input.name==''||input.username==''){
+    if (input.name == '' || input.username == '') {
       alert('Enter Data')
     }
 
@@ -29,7 +29,7 @@ function Todo() {
       update[edit] = input
       setlist(update)
       setedit(null)
-    } else {  
+    } else {
       setlist([...list, input])
 
     }
@@ -40,6 +40,7 @@ function Todo() {
     })
 
   }
+
   function handelDelete(i) {
     let update = [...list]
     update.splice(i, 1)
@@ -52,7 +53,7 @@ function Todo() {
   }
 
   return (
-    <div style={{margin:'10px 10px'}}>
+    <div style={{ margin: '10px 10px' }}>
       <input type="text" name="name" value={input.name} id="" placeholder=" Enter Name" onChange={handelSubmit} /><br /><br />
       <input type="text" name="username" value={input.username} id="" placeholder="Enter username" onChange={handelSubmit} /><br /><br />
       <button onClick={handelAdd}>Add</button><br />
@@ -63,8 +64,8 @@ function Todo() {
           list.map((u, i) => (
             <li key={i}><b>Name is:</b>{u.name} <br />
               <b>username is:</b>{u.username}
-              <button onClick={() => handelDelete(i)} style={{margin:'10px 10px'}}>Delete</button>
-              <button onClick={() => handelEdit(i)}  style={{margin:'10px 10px'}}>Edit</button>
+              <button onClick={() => handelDelete(i)} style={{ margin: '10px 10px' }}>Delete</button>
+              <button onClick={() => handelEdit(i)} style={{ margin: '10px 10px' }}>Edit</button>
               <hr /></li>
           ))
         }

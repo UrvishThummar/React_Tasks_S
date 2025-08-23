@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 function Nav() {
     return (
         <>
-            <div style={{ marginLeft: '5px' }}>
-                <Link to='/API'>API</Link>
-                <Link to='/Card12'>Card12</Link>
-                <Link to='/Pro'>Pro</Link>
+            <div style={{ gap: '5px' }}>
+                <Link style={{ marginLeft: '15px' }} to='/API'>API</Link>
+                <Link style={{ marginLeft: '15px' }} to='/Card12'>Card12</Link>
+                <Link style={{ marginLeft: '15px' }} to='/Product'>Prodcut</Link>
                 
             </div>
         </>

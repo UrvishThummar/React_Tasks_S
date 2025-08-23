@@ -25,6 +25,11 @@ import Pro from './Componenet/Pro';
 import Child1 from './Componenet/Child1';
 import Home from './Componenet/Home';
 import Capi from './Componenet/Capi';
+import Product from './Product';
+import ProductDetail from './Componenet/ProductDetail'
+import HomeP from './Componenet/HomeP';
+import HomeDetail from './Componenet/HomeDetail';
+import HomeCat from './Componenet/HomeCat';
 
 
 
@@ -38,8 +43,8 @@ function App() {
     <div>
 
       {/* <Home/> */}
-      {/* <Capi/> */}
-      <Todo/>
+      <Capi/>
+      {/* <Todo/> */}
       {/* <API/> */}
       {/* <Timer/> */}
       {/* <Usermanagement/> */}
@@ -56,22 +61,39 @@ function App() {
       {/* <MountUnm/> */}
       {/* <Card/> */}
       {/* <Card12/> */}
+      {/* <Table/> */}
 
       {/* { show ? <Card/> :<Table/>}
 
       <button onClick={()=>setshow(true)}> card</button>
             <button onClick={()=>setshow(false)}>table</button> */}
 
-      {/* <Nav />
+      {/* <Nav />  */}
 
-      <Routes>
-        <Route path='/API' element={<API />}></Route>
-        <Route path='/Card12' element={<Card12 />}></Route>
-        <Route path='/Pro' element={<Pro />}>
-          <Route path='Child1' element={<Child1></Child1>}></Route>
-        </Route>
-
+      {/* <Navbar /> */}
+      {/* <Routes>
+        <Route path="/API" element={<API />}/>
+        <Route path="/Card12" element={<Card12 />}/>
+        <Route path="/Product" element={<Product />}/>
+        <Route path="/ProductDetail/:id" element={<ProductDetail />} />
       </Routes> */}
+
+      {/* <Product/> */}
+      {/* <HomeP/> */}
+
+    
+
+
+{/* 
+  <Routes>
+  <Route path="/" element={<HomeP />} />
+  <Route path="/:category/:id" element={<HomeDetail />} />
+  <Route path="/:category" element={<HomeCat />} />
+</Routes> */}
+
+
+{/* <HomeDetail/> */}
+
 
 
     </div>

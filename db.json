@@ -1,9 +1,94 @@
 {
-  "products": [
+  "data": [
     {
-      "id": "11",
-      "name": "Urvish123as",
-      "price": "100"
+      "id": 1,
+      "name": "iPhone 15 Pro",
+      "price": "125000",
+      "category": "Electronics",
+      "image": "https://imgs.search.brave.com/as7uanXXmBxmUt-GuENmHtqqr2IoX8RK66GQnrVF-ew/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9waG90/b3M1LmFwcGxlaW5z/aWRlci5jb20vZ2Fs/bGVyeS82MTEzMC0x/MjYxMzctaVBob25l/LTE1LVByby1hbmQt/UHJvLU1heC14bC5q/cGc"
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy S23",
+      "price": "95000",
+      "category": "Electronics",
+      "image": "https://imgs.search.brave.com/_30pHcKFOUQCEyBMO3X8cPza5h8JHLIH4MMRTUIDgJY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/Xzg3NzAyMC1NTE04/MTE4NDg3OTk0Nl8x/MjIwMjQtVi1zYW1z/dW5nLWdhbGF4eS1z/MjMtcGx1cy0yNTZn/Yi1vcmlnaW5hbGVz/LWxpYmVyYWRvcy53/ZWJw"
+    },
+    {
+      "id": 3,
+      "name": "Levi's Denim Jacket",
+      "price": "4200",
+      "category": "Clothing",
+      "image": "https://imgs.search.brave.com/8c6tqZpRJqn0enbPlgKK3vmD-YGy95bO6yja2QgpA7M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWM5LmRlcG9zaXRw/aG90b3MuY29tLzE1/NTk5ODYvMTA3OC9p/LzQ1MC9kZXBvc2l0/cGhvdG9zXzEwNzg4/NTEwLXN0b2NrLXBo/b3RvLWplYW5zLWph/Y2tldC5qcGc"
+    },
+    {
+      "id": 4,
+      "name": "Nike Air Max Shoes",
+      "price": "8500",
+      "category": "Clothing",
+      "image": "https://imgs.search.brave.com/8rkELVmxGBzd8KclJnHOuKGrZrckWxcyEjYuHJhgsKA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9wYWly/LXdoaXRlLW5pa2Ut/c2hvZXMtdGFibGUt/ZnJvbnQtd2luZG93/LXBhaXItd2hpdGUt/bmlrZS1zaG9lcy10/YWJsZS1mcm9udC13/aW5kb3ctMzcwNjQ2/NDE2LmpwZw"
+    },
+    {
+      "id": 5,
+      "name": "Cama Beauty Face Serum",
+      "price": "1500",
+      "category": "Beauty",
+      "image": "https://imgs.search.brave.com/XzDKhFpQ3OPQ9Zzz8fZvotARiYg3Dqdu7Pj63w29dmc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZG90YW5ka2V5LmNv/bS9jZG4vc2hvcC9m/aWxlcy8xY18yLmpw/Zz92PTE3MjczNTUw/Nzgmd2lkdGg9MzYw"
+    },
+    {
+      "id": 6,
+      "name": "Maybelline Lipstick",
+      "price": "699",
+      "category": "Beauty",
+      "image": "https://imgs.search.brave.com/3jpLGKf57BKVuF6ktuEtIwMOOsQV_wEYEVvwFUEnMnk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuY3RmYXNzZXRz/Lm5ldC93bGtlMmNi/eWJsangvN25oSTFJ/MUlCblBSdXd6YVJs/RElvay9hNGQ5ZTFj/NTFlNDRhZmQwNjRk/NTM3ZjhlYmNkOGFh/OC8wMzdfMjIwMTU0/X0hPTExZV09PRC1Q/SU5LLVJFRFNfQ1VM/X0xJUFNUSUNLX01B/UktfT0ZfQV9LSVNT/X0ZBSVJfUkpfMjMw/OC5qcGc_cT04MCZ3/PTUxMiZoPTUxMiZi/Zz1yZ2I6ZmZmZmZm/JmZpdD1wYWQmZm09/anBn"
+    }
+  ],
+  "Electronics": [
+    {
+      "id": 1,
+      "name": "iPhone 15 Pro",
+      "price": "125000",
+      "category": "Electronics",
+      "image": "https://imgs.search.brave.com/as7uanXXmBxmUt-GuENmHtqqr2IoX8RK66GQnrVF-ew/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9waG90/b3M1LmFwcGxlaW5z/aWRlci5jb20vZ2Fs/bGVyeS82MTEzMC0x/MjYxMzctaVBob25l/LTE1LVByby1hbmQt/UHJvLU1heC14bC5q/cGc"
+    },
+    {
+      "id": 2,
+      "name": "Samsung Galaxy S23",
+      "price": "95000",
+      "category": "Electronics",
+      "image": "https://imgs.search.brave.com/_30pHcKFOUQCEyBMO3X8cPza5h8JHLIH4MMRTUIDgJY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/Xzg3NzAyMC1NTE04/MTE4NDg3OTk0Nl8x/MjIwMjQtVi1zYW1z/dW5nLWdhbGF4eS1z/MjMtcGx1cy0yNTZn/Yi1vcmlnaW5hbGVz/LWxpYmVyYWRvcy53/ZWJw"
+    }
+  ],
+  "Clothing": [
+    {
+      "id": 1,
+      "name": "Levi's Denim Jacket",
+      "price": "4200",
+      "category": "Clothing",
+      "image": "https://imgs.search.brave.com/8c6tqZpRJqn0enbPlgKK3vmD-YGy95bO6yja2QgpA7M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWM5LmRlcG9zaXRw/aG90b3MuY29tLzE1/NTk5ODYvMTA3OC9p/LzQ1MC9kZXBvc2l0/cGhvdG9zXzEwNzg4/NTEwLXN0b2NrLXBo/b3RvLWplYW5zLWph/Y2tldC5qcGc"
+    },
+    {
+      "id": 2,
+      "name": "Nike Air Max Shoes",
+      "price": "8500",
+      "category": "Clothing",
+      "image":"https://imgs.search.brave.com/8rkELVmxGBzd8KclJnHOuKGrZrckWxcyEjYuHJhgsKA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9wYWly/LXdoaXRlLW5pa2Ut/c2hvZXMtdGFibGUt/ZnJvbnQtd2luZG93/LXBhaXItd2hpdGUt/bmlrZS1zaG9lcy10/YWJsZS1mcm9udC13/aW5kb3ctMzcwNjQ2/NDE2LmpwZw"
+    }
+  ],
+  "Beauty": [
+    {
+      "id": 1,
+      "name": "Cama Beauty Face Serum",
+      "price": "1500",
+      "category": "Beauty",
+      "image": "https://imgs.search.brave.com/XzDKhFpQ3OPQ9Zzz8fZvotARiYg3Dqdu7Pj63w29dmc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZG90YW5ka2V5LmNv/bS9jZG4vc2hvcC9m/aWxlcy8xY18yLmpw/Zz92PTE3MjczNTUw/Nzgmd2lkdGg9MzYw"
+    },
+    {
+      "id": 2,
+      "name": "Maybelline Lipstick",
+      "price": "699",
+      "category": "Beauty",
+      "image":" https://imgs.search.brave.com/3jpLGKf57BKVuF6ktuEtIwMOOsQV_wEYEVvwFUEnMnk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuY3RmYXNzZXRz/Lm5ldC93bGtlMmNi/eWJsangvN25oSTFJ/MUlCblBSdXd6YVJs/RElvay9hNGQ5ZTFj/NTFlNDRhZmQwNjRk/NTM3ZjhlYmNkOGFh/OC8wMzdfMjIwMTU0/X0hPTExZV09PRC1Q/SU5LLVJFRFNfQ1VM/X0xJUFNUSUNLX01B/UktfT0ZfQV9LSVNT/X0ZBSVJfUkpfMjMw/OC5qcGc_cT04MCZ3/PTUxMiZoPTUxMiZi/Zz1yZ2I6ZmZmZmZm/JmZpdD1wYWQmZm09/anBn"
     }
   ]
 }
