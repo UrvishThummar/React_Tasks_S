@@ -23,7 +23,7 @@ export default function HomeCat() {
         <div key={item.id} style={{ marginBottom: "20px" }}>
           <h2>{item.name}</h2>
           <p>₹{item.price}</p>
-          <img src={item.image} alt=""  style={{width: "100px"}}/>
+          <img src={item.image} alt=""  style={{width: "100px"}}/><br/>        
           <Link to={`/${category}/${item.id}`}>View Detail</Link>
         </div>
       ))}

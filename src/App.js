@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Todo from './Componenet/Todo';
+// import Todo from './Componenet/Todo';
 import API from './Componenet/API';
 import Timer from './Componenet/Timer';
 import Usermanagement from './Componenet/Usermangement';
@@ -30,6 +30,12 @@ import ProductDetail from './Componenet/ProductDetail'
 import HomeP from './Componenet/HomeP';
 import HomeDetail from './Componenet/HomeDetail';
 import HomeCat from './Componenet/HomeCat';
+import AAA from './Componenet/AAA';
+import Sign from './Componenet/Sign';
+import Counter from './Componenet/Counter/Counter';
+import Display from './Componenet/Counter/Display';
+// import Display from './Componenet/Redux/Display';
+// import Todo from './Componenet/Redux/Todo';
 
 
 
@@ -43,7 +49,7 @@ function App() {
     <div>
 
       {/* <Home/> */}
-      <Capi/>
+      {/* <Capi/> */}
       {/* <Todo/> */}
       {/* <API/> */}
       {/* <Timer/> */}
@@ -81,19 +87,22 @@ function App() {
       {/* <Product/> */}
       {/* <HomeP/> */}
 
-    
+      {/* <Routes>
+        <Route path="/" element={<HomeP />} />
+        <Route path="/:category/:id" element={<HomeDetail />} />
+        <Route path="/:category" element={<HomeCat />} />
+        </Routes> */}
 
 
-{/* 
-  <Routes>
-  <Route path="/" element={<HomeP />} />
-  <Route path="/:category/:id" element={<HomeDetail />} />
-  <Route path="/:category" element={<HomeCat />} />
-</Routes> */}
+      {/* <HomeDetail/> */}
 
+      {/* <AAA/> */}
 
-{/* <HomeDetail/> */}
-
+      <Sign />
+      {/* <Todo/>
+      <Display/> */}
+      {/* <Display/>
+      <Counter/> */}
 
 
     </div>

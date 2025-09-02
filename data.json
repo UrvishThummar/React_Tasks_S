@@ -9,6 +9,11 @@
       "id": "2",
       "name": "gasiydc",
       "price": "5000"
+    },
+    {
+      "id": "3",
+      "name": "vasca",
+      "price": "200"
     }
   ]
 }

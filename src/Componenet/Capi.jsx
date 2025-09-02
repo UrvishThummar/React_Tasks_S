@@ -10,7 +10,7 @@ export default function Capi() {
   const [product, setProduct] = useState([]);
   const [edit, setEdit] = useState(null);
   const [search, setSearch] = useState('');
-  const [sortOrder, setSortOrder] = useState(""); 
+  const [sortOrder, setSortOrder] = useState("");
 
   useEffect(() => {
     fetchApi();
@@ -47,12 +47,12 @@ export default function Capi() {
     setEdit(item.id);
   };
 
-  
+
   const filteredProducts = product.filter((el) =>
     el.name.toLowerCase().includes(search.toLowerCase())
   );
 
-  
+
   const sortedProducts = [...filteredProducts].sort((a, b) => {
     if (sortOrder === "lowToHigh") {
       return a.price - b.price;
@@ -66,7 +66,7 @@ export default function Capi() {
     <div>
       <h1>Api</h1>
 
-      
+
       <input
         type="text"
         placeholder="Search by name..."
@@ -74,7 +74,7 @@ export default function Capi() {
         onChange={(e) => setSearch(e.target.value)}
       />
 
-      
+
       <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
         <option value="">Sort by Price</option>
         <option value="lowToHigh">Low → High</option>
@@ -82,7 +82,7 @@ export default function Capi() {
       </select>
       <br /><br />
 
-      
+
       <form onSubmit={handleSubmit}>
         <input
           type="number"
@@ -108,7 +108,7 @@ export default function Capi() {
         <input type="submit" />
       </form>
 
-     
+
       {sortedProducts.map((el, i) => (
         <div key={i}>
           <p>{el.id}</p>
