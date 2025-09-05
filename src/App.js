@@ -19,7 +19,7 @@ import MountUnm from './Componenet/Table';
 import Table from './Componenet/Table';
 import Card from './Componenet/Card';
 import { Navbar } from 'react-bootstrap';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Nav from './Componenet/Nav';
 import Pro from './Componenet/Pro';
 import Child1 from './Componenet/Child1';
@@ -30,13 +30,9 @@ import ProductDetail from './Componenet/ProductDetail'
 import HomeP from './Componenet/HomeP';
 import HomeDetail from './Componenet/HomeDetail';
 import HomeCat from './Componenet/HomeCat';
-import AAA from './Componenet/AAA';
-import Sign from './Componenet/Sign';
-import Counter from './Componenet/Counter/Counter';
-import Display from './Componenet/Counter/Display';
-// import Display from './Componenet/Redux/Display';
-// import Todo from './Componenet/Redux/Todo';
-
+import Cart from './Componenet/Cart';
+import Display from './Componenet/Redux/Display';
+import Todo from './Componenet/Redux/Todo';
 
 
 function App() {
@@ -83,26 +79,21 @@ function App() {
         <Route path="/Product" element={<Product />}/>
         <Route path="/ProductDetail/:id" element={<ProductDetail />} />
       </Routes> */}
+      
 
-      {/* <Product/> */}
-      {/* <HomeP/> */}
-
-      {/* <Routes>
+       <Routes>
         <Route path="/" element={<HomeP />} />
+     
         <Route path="/:category/:id" element={<HomeDetail />} />
         <Route path="/:category" element={<HomeCat />} />
-        </Routes> */}
+        <Route path="/cart" element={<Cart />} />
+      </Routes> 
 
 
-      {/* <HomeDetail/> */}
+{/* <HomeDetail/> */}
 
-      {/* <AAA/> */}
-
-      <Sign />
-      {/* <Todo/>
-      <Display/> */}
-      {/* <Display/>
-      <Counter/> */}
+{/* <Todo/>
+<Display/> */}
 
 
     </div>

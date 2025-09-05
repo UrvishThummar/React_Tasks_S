@@ -15,6 +15,9 @@ export default function HomeP() {
   return (
     <div>
       <h1>All Products</h1>
+      <div style={{ marginBottom: "20px" }}>
+       
+      </div>
       {state.map((el) => (
         <div key={el.id} style={{ marginBottom: "20px" }}>
           <Link to={`/${el.category}`}>{el.name}</Link>

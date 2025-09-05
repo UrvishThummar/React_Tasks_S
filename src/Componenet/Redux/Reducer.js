@@ -12,6 +12,7 @@ export const myReducer = (state = arr, action) => {
         array.splice(action.data, 1)
         return array
     }
+ 
     else if (action.type === "EDIT") {
         const { i, newvalue } = action.data;
         const newarr = [...state]

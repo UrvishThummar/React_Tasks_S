@@ -5,7 +5,7 @@ import { delateAction, editAction } from './Action'
 
 export default function Display() {
     const data = useSelector((store) => { return store })
-    console.log(data)
+    // console.log(data)
 
     const dispatch = useDispatch()
 
@@ -32,7 +32,7 @@ export default function Display() {
             {
                 data.map((el, i) => {
                     return <>
-                        <li>{el}
+                        <li key={i}>{el}
                             <button onClick={() => handelDelete(i)} style={{ margin: '10px 10px' }}>Delete</button>
                             <button onClick={() => handelEdit(i)} style={{ margin: '10px 10px' }}>Edit</button>
 

@@ -58,6 +58,7 @@ export default function Capi() {
       return a.price - b.price;
     } else if (sortOrder === "highToLow") {
       return b.price - a.price;
+      
     }
     return 0;
   });

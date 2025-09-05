@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { myAction } from "./Elec/Action";
+import { useDispatch } from "react-redux";
 
 export default function HomeDetail() {
   const [state, setState] = useState({});
   const { id, category } = useParams();
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     fetch(`http://localhost:3000/${category}/${id}`)
@@ -17,6 +22,13 @@ export default function HomeDetail() {
     return <h2>Loading...</h2>;
   }
 
+  function AddToCart(){
+    console.log("Adding to cart:", state);
+    dispatch(myAction(state));
+    console.log("Item dispatched to Redux");
+    navigate('/cart');
+  }
+
   return (
     <div>
       <h1>Product Detail</h1>
@@ -24,6 +36,8 @@ export default function HomeDetail() {
       <img src={state.image} alt={state.name} width={200} />
       <li>₹{state.price}</li>
       <li>{state.category}</li>
+
+      <button onClick={AddToCart}>Add to Cart</button>
     </div>
   );
 }
