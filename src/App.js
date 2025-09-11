@@ -33,6 +33,11 @@ import HomeCat from './Componenet/HomeCat';
 import Cart from './Componenet/Cart';
 import Display from './Componenet/Redux/Display';
 import Todo from './Componenet/Redux/Todo';
+import Par from './Componenet/Child';
+import Ragister from './Componenet/FireBase/Ragister';
+import SingInF from './Componenet/FireBase/SingInF';
+import FirebaseDB from './Componenet/FirebaseDB';
+
 
 
 function App() {
@@ -64,6 +69,11 @@ function App() {
       {/* <Card/> */}
       {/* <Card12/> */}
       {/* <Table/> */}
+      {/* <Ragister/> */}
+      {/* <SingInF/> */}
+      <FirebaseDB/>
+
+      {/* <LoginGoogle/> */}
 
       {/* { show ? <Card/> :<Table/>}
 
@@ -81,13 +91,13 @@ function App() {
       </Routes> */}
       
 
-       <Routes>
+       {/* <Routes>
         <Route path="/" element={<HomeP />} />
      
         <Route path="/:category/:id" element={<HomeDetail />} />
         <Route path="/:category" element={<HomeCat />} />
         <Route path="/cart" element={<Cart />} />
-      </Routes> 
+      </Routes>  */}
 
 
 {/* <HomeDetail/> */}
@@ -95,6 +105,7 @@ function App() {
 {/* <Todo/>
 <Display/> */}
 
+{/* <Par/> */}
 
     </div>
   );

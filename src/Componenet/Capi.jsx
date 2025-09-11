@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import axios from "axios";
 
 export default function Capi() {
@@ -14,12 +14,12 @@ export default function Capi() {
 
   useEffect(() => {
     fetchApi();
-  }, []);
+  });
 
-  const fetchApi = async () => {
+  const fetchApi =useCallback( async () => {
     const info = await axios.get("http://localhost:3000/data");
     setProduct(info.data);
-  };
+  },[search]);
 
   function AddText(e) {
     setText({ ...text, [e.target.name]: e.target.value });
@@ -48,12 +48,12 @@ export default function Capi() {
   };
 
 
-  const filteredProducts = product.filter((el) =>
-    el.name.toLowerCase().includes(search.toLowerCase())
-  );
+    // const filteredProducts = product.filter((el) =>
+    //   el.name.toLowerCase().includes(search.toLowerCase())
+    // );
 
 
-  const sortedProducts = [...filteredProducts].sort((a, b) => {
+  const sortedProducts = [...product].sort((a, b) => {
     if (sortOrder === "lowToHigh") {
       return a.price - b.price;
     } else if (sortOrder === "highToLow") {
