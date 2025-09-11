@@ -10,7 +10,7 @@ export default function Firebasedb() {
         username: "",
         email: ""
     });
-    const [editId, setEditId] = useState(null); // edit ke liye
+    const [editId, setEditId] = useState(null); 
 
     useEffect(() => {
         const usersRef = ref(database, 'users/Urvish');
@@ -71,7 +71,6 @@ export default function Firebasedb() {
         }
     }
 
-    // DELETE user
     function deleteUser(id) {
         const userRef = ref(database, `users/Urvish/${id}`);
         remove(userRef)
@@ -84,7 +83,6 @@ export default function Firebasedb() {
     }
 
 
-    // EDIT user (prefill form)
     function editUser(user) {
         setForm({ username: user.username, email: user.email });
         setEditId(user.id);
