@@ -37,6 +37,7 @@ import Par from './Componenet/Child';
 import Ragister from './Componenet/FireBase/Ragister';
 import SingInF from './Componenet/FireBase/SingInF';
 import FirebaseDB from './Componenet/FirebaseDB';
+import FireStore from './Componenet/FireStore';
 
 
 
@@ -52,7 +53,7 @@ function App() {
       {/* <Home/> */}
       {/* <Capi/> */}
       {/* <Todo/> */}
-      {/* <API/> */}
+      <API/>
       {/* <Timer/> */}
       {/* <Usermanagement/> */}
       {/* <Title/> */}
@@ -71,10 +72,9 @@ function App() {
       {/* <Table/> */}
       {/* <Ragister/> */}
       {/* <SingInF/> */}
-      <FirebaseDB/>
+      {/* <FirebaseDB/> */}
 
-      {/* <LoginGoogle/> */}
-
+    {/* <FireStore/> */}
       {/* { show ? <Card/> :<Table/>}
 
       <button onClick={()=>setshow(true)}> card</button>

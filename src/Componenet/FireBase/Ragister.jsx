@@ -30,7 +30,7 @@ export default function Ragister() {
             <input type="text" value={email} onChange={(e) => { setEmail(e.target.value) }} name="" id="" placeholder="Email" />
             <input type="text" value={password} onChange={(e) => { setPassword(e.target.value) }} name="" id="" placeholder="PAssword" />
             <button onClick={ragister}>Click</button><br />
-
+                
             <button onClick={signupWithGoogle}>Sign in with google</button>
 
         </div>

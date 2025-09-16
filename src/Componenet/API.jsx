@@ -5,11 +5,11 @@ function API() {
     const [products, setProducts] = useState([]); 
 
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products?limit=5')
+        fetch('https://dummyjson.com/products')
             .then(res => res.json())
             .then(data => {
-                console.log(data);
-                setProducts(data);
+                console.log(data.products);
+                setProducts(data.products);
             })
             .catch(error => console.error('Error:', error));
     }, []);
@@ -19,8 +19,7 @@ function API() {
             <ul >
                 {products.map((item) => (
                     <li key={item.id}>
-                        <Link to={`/ProductDetail/${item.id}`}>{item.title}</Link>  <br />
-                        <img src={item.image} alt={item.title} width="100" />
+                        <img src={item.images} alt={item.title} width="100" />
                         <p>${item.price}</p>
                     </li>
                 ))}
